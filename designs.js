@@ -1,32 +1,28 @@
-// Select color input
-// Select size input
 
-// When size is submitted by the user, call makeGrid()
+function createGrid(x,y) {
 
-function makeGrid() {
+    var element = document.getElementById("container");
+    element.classList.toggle("container");
 
-// Your code goes here!
-
-
-}
-
-
-//on submit
-//grab values and make a grid
-
-function grabValues() {
-
-    $("#sizePicker").submit(function(event){
-
-        var gridHeight = $("#inputHeight").val();
-        var gridWidth = $("#inputWidth").val();
-
-        // console.log($("#inputHeight").val());
-        // console.log($("#inputWidth").val());
-    })
-
-    //call make grid()
+    for (var rows = 0; rows < x; rows++) {
+        for (var columns = 0; columns < y; columns++) {
+            $("#container").append("<div class='grid'></div>");
+        };
+    };
+    $(".grid").width(500/x);
+    $(".grid").height(500/y);
 
 }
 
-grabValues();
+$("form").on("submit",function(event){
+
+    event.preventDefault();
+
+    var userHeightInput = $("#inputHeight").val().trim();
+    var userWidthInput = $("#inputWidth").val().trim();
+
+    console.log(userHeightInput, userWidthInput);
+
+    createGrid(userWidthInput,userHeightInput);
+
+});

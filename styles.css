@@ -38,3 +38,29 @@ td {
 input[type=number] {
     width: 6em;
 }
+
+/*this class styles our grid*/
+.container {
+    position: relative;
+    top: 30px;
+    outline:2px solid #000;
+    font-size: 0;
+    margin:auto;
+    height:500px;
+    width:500px;
+    padding: 0;
+    border: none;
+}
+
+/*this class styles the boxes in our grid */
+.grid {
+    margin:0;
+    padding:0;
+    border:none;
+    outline:1px solid #000;
+    display:inline-block;
+}
+
+footer {
+    margin-top: 10%;
+}
