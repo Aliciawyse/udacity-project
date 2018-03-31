@@ -19,13 +19,12 @@ $("form").on("submit",function(event){
     event.preventDefault();
     var userHeightInput = $("#inputHeight").val().trim();
     var userWidthInput = $("#inputWidth").val().trim();
-
     makeGrid(userWidthInput,userHeightInput);
 
     $(document).ready(function () {
         $('.grid').click(function () {
+
             var colors = new Array();
-            var b = Math.floor(Math.random()*colors.length);
 
             colors[0] = $("#colorPicker").val();
             colors[1] = "blue";
@@ -33,11 +32,18 @@ $("form").on("submit",function(event){
             colors[3] = "lime";
             colors[4] = "teal";
 
-            if($(this).css('background-color') === "rgba(0, 0, 0, 0)"){
+            //radomly select colors
+            var b = Math.floor(Math.random()*colors.length);
+
+            if($(this).css('background-color') === "rgba(0, 0, 0, 0)")
+
+            {
                 $(this).css('background', colors[0]);
+
             } else {
                 $(this).css('background', colors[b])
             }
+
         });
-    });
+    })
 });
