@@ -1,5 +1,5 @@
 
-function createGrid(x,y) {
+function makeGrid(x,y) {
 
     var element = document.getElementById("container");
     element.classList.toggle("container");
@@ -17,12 +17,27 @@ function createGrid(x,y) {
 $("form").on("submit",function(event){
 
     event.preventDefault();
-
     var userHeightInput = $("#inputHeight").val().trim();
     var userWidthInput = $("#inputWidth").val().trim();
 
-    console.log(userHeightInput, userWidthInput);
+    makeGrid(userWidthInput,userHeightInput);
 
-    createGrid(userWidthInput,userHeightInput);
+    $(document).ready(function () {
+        $('.grid').click(function () {
+            var colors = new Array();
+            var b = Math.floor(Math.random()*colors.length);
 
+            colors[0] = $("#colorPicker").val();
+            colors[1] = "blue";
+            colors[2] = "green";
+            colors[3] = "lime";
+            colors[4] = "teal";
+
+            if($(this).css('background-color') === "rgba(0, 0, 0, 0)"){
+                $(this).css('background', colors[0]);
+            } else {
+                $(this).css('background', colors[b])
+            }
+        });
+    });
 });
