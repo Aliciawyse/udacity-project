@@ -1,14 +1,15 @@
-
+//creates a grid
 function makeGrid(x,y) {
 
-    var element = document.getElementById("container");
+    const element = document.getElementById("container");
     element.classList.toggle("container");
 
-    for (var rows = 0; rows < x; rows++) {
-        for (var columns = 0; columns < y; columns++) {
+    for (let rows = 0; rows < x; rows++) {
+        for (let columns = 0; columns < y; columns++) {
             $("#container").append("<div class='grid'></div>");
         };
     };
+
     $(".grid").width(500/x);
     $(".grid").height(500/y);
 
@@ -17,9 +18,10 @@ function makeGrid(x,y) {
 $("form").on("submit",function(event){
 
     event.preventDefault();
-    var position = $("#theCanvas").offset().top;
-    var userHeightInput = $("#inputHeight").val().trim();
-    var userWidthInput = $("#inputWidth").val().trim();
+    const position = $("#theCanvas").offset().top;
+    const userHeightInput = $("#inputHeight").val().trim();
+    const userWidthInput = $("#inputWidth").val().trim();
+    document.getElementById("submit").classList.toggle("hidden");
     makeGrid(userWidthInput,userHeightInput);
 
     // scroll to where element with id theCanvas is located on the page
@@ -30,16 +32,16 @@ $("form").on("submit",function(event){
     $(document).ready(function () {
         $('.grid').click(function () {
 
-            var colors = new Array();
+            let colors = new Array();
 
             colors[0] = $("#colorPicker").val();
-            colors[1] = "blue";
-            colors[2] = "green";
-            colors[3] = "lime";
-            colors[4] = "teal";
+            colors[1] = "hsl(204, 86%, 53%)";
+            colors[2] = "hsl(348, 100%, 61%)";
+            colors[3] = "hsl(171, 100%, 41%)";
+            colors[4] = "hsl(141, 71%, 48%)";
 
             //radomly select colors
-            var b = Math.floor(Math.random()*colors.length);
+            let b = Math.floor(Math.random()*colors.length);
 
             if($(this).css('background-color') === "rgba(0, 0, 0, 0)")
 

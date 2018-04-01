@@ -29,8 +29,13 @@ input[type=number] {
     width: 6em;
 }
 
+.hidden {
+    display: none;
+}
+
 #userOptions {
-    background: hsl(0, 0%, 96%)	;
+    background: hsl(0, 0%, 96%);
+    padding-bottom: 2%;
 }
 
 /*this class styles our grid*/
