@@ -17,9 +17,15 @@ function makeGrid(x,y) {
 $("form").on("submit",function(event){
 
     event.preventDefault();
+    var position = $("#theCanvas").offset().top;
     var userHeightInput = $("#inputHeight").val().trim();
     var userWidthInput = $("#inputWidth").val().trim();
     makeGrid(userWidthInput,userHeightInput);
+
+    // scroll to where element with id theCanvas is located on the page
+    $("body, html").animate({
+        scrollTop: position
+    }, 500 );
 
     $(document).ready(function () {
         $('.grid').click(function () {

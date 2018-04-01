@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <title>Alicia's Pixel Art Maker!</title>
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <!--bulma: a css framework based on Flexbox-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <!--css-->
     <link rel="stylesheet" href="styles.css">
     <!--jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <body>
-    <h1>Lab: Pixel Art Maker</h1>
 
-    <h2>Choose Grid Size</h2>
+    <header>
+        <h1>Lab: Pixel Art Maker</h1>
+    </header>
 
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="1">
-        Grid Width:
-        <input type="number" id="inputWidth" name="width" min="1" value="1">
-        <input type="submit">
-    </form>
+    <section id="userOptions">
+        <h2>Choose Grid Size</h2>
 
-    <label for="colorPicker">Pick a Color:</label>
-    <input type="color" id="colorPicker" value="#ff0000">
+        <form id="sizePicker" class="columns">
+            <div class="column">
+                <label>Grid Height:</label>
+            <input class="input is-warning" type="number" id="inputHeight" name="height" min="1" value="1">
+            </div>
 
-    <h2>Design Canvas</h2>
-    <table id="pixelCanvas"></table>
+            <div class="column">
+                <label>Grid Width:</label>
+            <input class="input is-warning" type="number" id="inputWidth" name="width" min="1" value="1">
+            </div>
 
-    <div id="container"></div>
+            <div class="column">
+            <input class="button is-warning" type="submit">
+            </div>
+        </form>
+    </section>
+
+    <section id="theCanvas">
+        <h2>Design Canvas</h2>
+        <label for="colorPicker">Pick a Color:</label>
+        <input class="input" type="color" id="colorPicker" value="#ffdd57">
+        <div id="container"></div>
+    </section>
+
+
 
     <footer> </footer>
 

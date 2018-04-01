@@ -1,42 +1,36 @@
 body {
     text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 1%;
 }
 
 h1 {
-    font-family: Monoton;
     font-size: 70px;
-    margin: 0.2em;
+    background: #ffdd57;
+}
+
+form {
+    flex-direction: column;
+}
+
+/*ensure label and input boxes are aligned*/
+label, input {
+    display:inline-block !important;
+    vertical-align: middle !important;
 }
 
 h2 {
-    margin: 1em 0 0.25em;
-}
-
-h2:first-of-type {
-    margin-top: 0.5em;
-}
-
-table,
-tr,
-td {
-    border: 1px solid black;
-}
-
-table {
-    border-collapse: collapse;
-    margin: 0 auto;
-}
-
-tr {
-    height: 20px;
-}
-
-td {
-    width: 20px;
+    font-size: 60px;
 }
 
 input[type=number] {
     width: 6em;
+}
+
+#userOptions {
+    background: hsl(0, 0%, 96%)	;
 }
 
 /*this class styles our grid*/
@@ -50,6 +44,10 @@ input[type=number] {
     width:500px;
     padding: 0;
     border: none;
+}
+
+#colorPicker{
+    width: 80px;
 }
 
 /*this class styles the boxes in our grid */
