@@ -10,4 +10,14 @@ The game board consists of sixteen "cards" arranged in a grid. The deck is made 
 - javascript
 - jquery
 
+###The Process
+
+At first I was going to approach this like I did the pixel art maker project where I created a bunch of clickable elements. 
+
+Then I came across this [Kahn Academy walk-through](https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations/memory-game/a/grid-of-tiles) that suggests using object oriented principles for this project. 
+
+
+
+
+
 
